@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ViewLearnActivity"
+    android:orientation="horizontal">
+
+    <com.moyang.room.view.textview.TitleTextView
+        android:id="@+id/tv_title_one"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        android:shadowColor="@color/red"
+        android:shadowRadius="3.0"
+        android:shadowDx="10.0"
+        android:shadowDy="10.0"
+
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever">
+<!--        <requestFocus/>-->
+    </com.moyang.room.view.textview.TitleTextView>
+
+<!--stateListDrawable-->
+    <Button
+        android:id="@+id/bt_drawable"
+        android:text="@string/button_1"
+        android:layout_below="@+id/tv_title_one"
+        android:background="@drawable/bt_bg_selector"
+        android:backgroundTint="@color/btn_color_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+
+</RelativeLayout>
