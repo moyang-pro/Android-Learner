@@ -5,6 +5,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +28,15 @@ public class ViewLearnActivity extends AppCompatActivity {
 //        textView.requestFocus();
 
         Button button = findViewById(R.id.bt_drawable);
+        EditText editText = findViewById(R.id.et_input);
+
 
         // 点击事件
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("moyang99", "onClick");
+                Log.i("moyang99", "editText.getText(): " + editText.getText());
             }
         });
 
@@ -49,6 +55,17 @@ public class ViewLearnActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 Log.i("moyang99", "onTouch: " + event.getAction());
                 return false;
+            }
+        });
+
+
+        ImageView imageView = findViewById(R.id.imv_one);
+        ProgressBar progressBar = findViewById(R.id.pb_one);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int progress = progressBar.getProgress();
+                progressBar.setProgress(progress + 10);
             }
         });
     }

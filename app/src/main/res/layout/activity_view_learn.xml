@@ -10,7 +10,7 @@
     <com.moyang.room.view.textview.TitleTextView
         android:id="@+id/tv_title_one"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="40dp"
         android:text="@string/title"
         android:textColor="@color/black"
         android:textSize="@dimen/dimen_20sp"
@@ -40,5 +40,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </Button>
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_below="@+id/bt_drawable"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/input_username"
+        android:textColorHint="#878787"
+        android:inputType="date"
+        android:drawableStart="@drawable/ic_baseline_access_alarms_24"
+        android:drawablePadding="10dp"
+        android:background="@color/white"
+        android:autofillHints="">
+    </EditText>
+
+    <ImageView
+        android:id="@+id/imv_one"
+        android:layout_below="@+id/et_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/saint"
+        android:scaleType="fitXY"
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/test_image">
+    </ImageView>
+
+    <ProgressBar
+        android:id="@+id/pb_one"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_below="@+id/imv_one"
+        android:max="100"
+        android:progress="20"
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+    </ProgressBar>
 
 </RelativeLayout>
