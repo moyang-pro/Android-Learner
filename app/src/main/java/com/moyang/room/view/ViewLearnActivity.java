@@ -1,5 +1,13 @@
 package com.moyang.room.view;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -12,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import com.moyang.room.R;
 
@@ -67,6 +76,38 @@ public class ViewLearnActivity extends AppCompatActivity {
                 int progress = progressBar.getProgress();
                 progressBar.setProgress(progress + 10);
             }
+        });
+
+        Button send_btn = findViewById(R.id.bt_send_notify);
+        Button cancel_btn = findViewById(R.id.bt_cancel_notify);
+
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("moyang", "测试",
+                    NotificationManager.IMPORTANCE_HIGH);
+            manager.createNotificationChannel(channel);
+        }
+
+        Intent intent = new Intent(this, NotifyActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+        Notification notification = new  NotificationCompat.Builder(this, "moyang")
+                .setContentTitle("官方通知")
+                .setContentText("世界这么大， 我想去走走")
+                .setSmallIcon(R.drawable.ic_baseline_access_alarms_24)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.saint))
+                .setColor(Color.parseColor("#ff0000"))
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+                .build();
+
+        send_btn.setOnClickListener(v -> {
+            manager.notify(1, notification);
+        });
+
+        cancel_btn.setOnClickListener(v -> {
+            manager.cancel(1);
         });
     }
 }

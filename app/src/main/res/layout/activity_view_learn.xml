@@ -78,4 +78,21 @@
         android:layout_height="10dp">
     </ProgressBar>
 
+    <Button
+        android:id="@+id/bt_send_notify"
+        android:layout_below="@+id/pb_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_notify">
+    </Button>
+
+    <Button
+        android:layout_below="@+id/bt_send_notify"
+        android:id="@+id/bt_cancel_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_notify">
+    </Button>
+
+
 </RelativeLayout>
