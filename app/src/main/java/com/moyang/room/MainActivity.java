@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.moyang.room.layout.LayoutLearnActivity;
 import com.moyang.room.view.ViewLearnActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -17,6 +18,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         Button learnViewBt = findViewById(R.id.bt_learn_view);
         learnViewBt.setOnClickListener(this);
+        Button learnLayoutBt = findViewById(R.id.bt_learn_layout);
+        learnLayoutBt.setOnClickListener(this);
     }
 
     @Override
@@ -24,10 +27,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.bt_learn_view:
                 startMyActivity(ViewLearnActivity.class);
+                break;
+            case R.id.bt_learn_layout:
+                startMyActivity(LayoutLearnActivity.class);
+                break;
         }
     }
 
-    private void startMyActivity(Class<ViewLearnActivity> className) {
+    private void startMyActivity(Class<?> className) {
         Intent intent = new Intent(MainActivity.this, className);
         startActivity(intent);
     }

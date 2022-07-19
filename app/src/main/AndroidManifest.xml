@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Room">
         <activity
+            android:name=".view.listview.RecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.listview.ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layout.LayoutLearnActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.NotifyActivity"
             android:exported="false" />
         <activity

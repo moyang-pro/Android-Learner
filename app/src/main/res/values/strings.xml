@@ -7,4 +7,10 @@
     <string name="test_image">测试图片</string>
     <string name="send_notify">发送通知</string>
     <string name="cancel_notify">取消通知</string>
+    <string name="alert_dialog">对话框</string>
+    <string name="popup_window">悬浮窗</string>
+    <string name="close">关闭</string>
+    <string name="learn_layout">学习布局属性</string>
+    <string name="list">列表</string>
+    <string name="recycle_list">列表recycle</string>
 </resources>

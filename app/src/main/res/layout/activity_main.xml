@@ -14,4 +14,12 @@
         android:background="@color/red"
         android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/bt_learn_layout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/learn_layout"
+        android:background="@color/blue"
+        android:layout_gravity="center"/>
+
 </LinearLayout>

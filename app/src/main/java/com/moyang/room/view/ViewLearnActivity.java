@@ -1,9 +1,11 @@
 package com.moyang.room.view;
 
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -12,9 +14,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +27,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.moyang.room.R;
+import com.moyang.room.view.listview.ListActivity;
+import com.moyang.room.view.listview.RecycleActivity;
 
 public class ViewLearnActivity extends AppCompatActivity {
 
@@ -108,6 +114,71 @@ public class ViewLearnActivity extends AppCompatActivity {
 
         cancel_btn.setOnClickListener(v -> {
             manager.cancel(1);
+        });
+
+        Button btn_alert = findViewById(R.id.bt_alert);
+        btn_alert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = getLayoutInflater().inflate(R.layout.alert_dialog_customer, null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(ViewLearnActivity.this);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setTitle("今天天气怎么样")
+                        .setMessage("今天天气好极了")
+                        .setView(dialogView)
+                        .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.i("moyang99", "点击了确定按钮");
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.i("moyang99", "点击了取消按钮");
+                            }
+                        })
+                        .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.i("moyang99", "点击了OK按钮");
+                            }
+                        })
+                        .create().show();
+            }
+        });
+
+        Button btn_popup = findViewById(R.id.bt_popup);
+        btn_popup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View popupView = getLayoutInflater().inflate(R.layout.popup_window, null);
+                // PopupWindow popupWindow = new PopupWindow(popupView);
+                PopupWindow popupWindow = new PopupWindow(popupView,
+                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+                popupWindow.showAsDropDown(v);
+                Log.i("moyang99", "focus: " + ViewLearnActivity.this.getCurrentFocus());
+//                popupWindow.showAsDropDown(v, v.getWidth(), -v.getHeight());
+            }
+        });
+
+
+        Button btn_list = findViewById(R.id.bt_list);
+        btn_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ViewLearnActivity.this, ListActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+        Button btn_recycle_list = findViewById(R.id.bt_recycle_list);
+        btn_recycle_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ViewLearnActivity.this, RecycleActivity.class);
+                startActivity(intent1);
+            }
         });
     }
 }

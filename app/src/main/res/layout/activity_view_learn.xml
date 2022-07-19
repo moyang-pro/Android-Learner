@@ -94,5 +94,35 @@
         android:text="@string/cancel_notify">
     </Button>
 
+    <Button
+        android:layout_below="@+id/bt_cancel_notify"
+        android:id="@+id/bt_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_dialog">
+    </Button>
 
+    <Button
+        android:layout_below="@+id/bt_alert"
+        android:id="@+id/bt_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_window">
+    </Button>
+
+    <Button
+        android:layout_below="@+id/bt_alert"
+        android:id="@+id/bt_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/list">
+    </Button>
+
+    <Button
+        android:layout_below="@+id/bt_list"
+        android:id="@+id/bt_recycle_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recycle_list">
+    </Button>
 </RelativeLayout>
