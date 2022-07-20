@@ -13,4 +13,8 @@
     <string name="learn_layout">学习布局属性</string>
     <string name="list">列表</string>
     <string name="recycle_list">列表recycle</string>
+    <string name="learn_anim">学习动画</string>
+    <string name="anim_frame">逐帧动画</string>
+    <string name="anim_between">补间动画</string>
+    <string name="anim_value">属性动画</string>
 </resources>

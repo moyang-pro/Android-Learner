@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Room">
         <activity
+            android:name=".anim.FrameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".anim.AnimLearnActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.listview.RecycleActivity"
             android:exported="false" />
         <activity

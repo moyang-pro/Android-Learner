@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".anim.AnimLearnActivity">
+
+
+    <ImageView
+        android:id="@+id/image_anim"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/frame"
+        android:contentDescription="动画">
+    </ImageView>
+
+    <Button
+        android:id="@+id/bt_anim_frame"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/anim_frame"
+        android:background="@color/red"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/image_anim_2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/whale"
+        android:scaleType="fitXY"
+        android:background="@drawable/frame"
+        android:contentDescription="动画">
+    </ImageView>
+
+    <Button
+        android:id="@+id/bt_anim_between"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/anim_between"
+        android:background="@color/blue"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/bt_anim_value"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/anim_value"
+        android:background="#4CAF50"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_anim"
+        android:text="@string/app_name"
+        android:textSize="@dimen/dimen_20sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+</LinearLayout>
