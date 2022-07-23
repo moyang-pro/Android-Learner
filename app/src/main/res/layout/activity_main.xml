@@ -7,28 +7,43 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_learn_view"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/learn_view"
-        android:background="@color/red"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_learn_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_view"
+            android:background="@color/red"
+            android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/bt_learn_layout"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/learn_layout"
-        android:background="@color/blue"
-        android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/bt_learn_layout"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_layout"
+            android:background="@color/blue"
+            android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/bt_learn_anim"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/learn_anim"
-        android:background="#4CAF50"
-        android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/bt_learn_anim"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_anim"
+            android:background="#4CAF50"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/bt_learn_fragment"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_fragment"
+            android:background="#FFEB3B"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
 
 </LinearLayout>

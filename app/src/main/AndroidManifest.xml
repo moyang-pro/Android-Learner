@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Room">
         <activity
+            android:name=".view.viewpager.ViewPager2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.FragmentLearnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.viewpager.ViewPagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".anim.FrameActivity"
             android:exported="false" />
         <activity

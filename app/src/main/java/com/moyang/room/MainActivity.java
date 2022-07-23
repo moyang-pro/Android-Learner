@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.moyang.room.anim.AnimLearnActivity;
+import com.moyang.room.fragment.FragmentLearnActivity;
 import com.moyang.room.layout.LayoutLearnActivity;
 import com.moyang.room.view.ViewLearnActivity;
 
@@ -23,6 +24,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         learnLayoutBt.setOnClickListener(this);
         Button learnAnimBt = findViewById(R.id.bt_learn_anim);
         learnAnimBt.setOnClickListener(this);
+        Button learnFragmentBt = findViewById(R.id.bt_learn_fragment);
+        learnFragmentBt.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +39,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_learn_anim:
                 startMyActivity(AnimLearnActivity.class);
+                break;
+            case R.id.bt_learn_fragment:
+                startMyActivity(FragmentLearnActivity.class);
                 break;
         }
     }

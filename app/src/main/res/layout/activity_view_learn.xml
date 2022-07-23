@@ -125,4 +125,20 @@
         android:layout_height="wrap_content"
         android:text="@string/recycle_list">
     </Button>
+
+    <Button
+        android:layout_below="@+id/bt_recycle_list"
+        android:id="@+id/bt_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpager">
+    </Button>
+
+    <Button
+        android:layout_below="@+id/bt_view_page"
+        android:id="@+id/bt_view_page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpager2">
+    </Button>
 </RelativeLayout>

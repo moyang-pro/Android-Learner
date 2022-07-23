@@ -29,6 +29,8 @@ import androidx.core.app.NotificationCompat;
 import com.moyang.room.R;
 import com.moyang.room.view.listview.ListActivity;
 import com.moyang.room.view.listview.RecycleActivity;
+import com.moyang.room.view.viewpager.ViewPager2Activity;
+import com.moyang.room.view.viewpager.ViewPagerActivity;
 
 public class ViewLearnActivity extends AppCompatActivity {
 
@@ -177,6 +179,24 @@ public class ViewLearnActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(ViewLearnActivity.this, RecycleActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+        Button btn_vp = findViewById(R.id.bt_view_page);
+        btn_vp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ViewLearnActivity.this, ViewPagerActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+        Button btn_vp2 = findViewById(R.id.bt_view_page2);
+        btn_vp2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ViewLearnActivity.this, ViewPager2Activity.class);
                 startActivity(intent1);
             }
         });

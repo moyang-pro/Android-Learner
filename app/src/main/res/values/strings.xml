@@ -17,4 +17,36 @@
     <string name="anim_frame">逐帧动画</string>
     <string name="anim_between">补间动画</string>
     <string name="anim_value">属性动画</string>
+    <string name="viewpager">ViewPager</string>
+    <string name="viewpager2">ViewPager2</string>
+    <string name="page_1">页面1</string>
+    <string name="page_2">页面2</string>
+    <string name="page_3">页面3</string>
+    <string name="learn_fragment">学习fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="fragment_one">Fragment-One</string>
+    <string name="fragment_two">Fragment-two</string>
+    <string name="message">通信</string>
+    <string name="hello">hello</string>
+    <string name="we_chat">微信</string>
+    <string name="chat_with">微信聊天</string>
+    <string name="contract">通讯录</string>
+    <string name="friends">朋友圈</string>
 </resources>
