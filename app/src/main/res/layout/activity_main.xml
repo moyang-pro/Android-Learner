@@ -43,6 +43,14 @@
             android:text="@string/learn_fragment"
             android:background="#FFEB3B"
             android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/bt_learn_broadcast"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/learn_broadcast"
+            android:background="#00BCD4"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
 

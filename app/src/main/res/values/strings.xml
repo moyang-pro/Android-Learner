@@ -49,4 +49,6 @@
     <string name="chat_with">微信聊天</string>
     <string name="contract">通讯录</string>
     <string name="friends">朋友圈</string>
+    <string name="learn_broadcast">学习广播</string>
+    <string name="send_broadcast">发送广播</string>
 </resources>
