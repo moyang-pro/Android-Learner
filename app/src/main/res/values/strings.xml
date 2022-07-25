@@ -51,4 +51,7 @@
     <string name="friends">朋友圈</string>
     <string name="learn_broadcast">学习广播</string>
     <string name="send_broadcast">发送广播</string>
+    <string name="learn_file">学习文件存储</string>
+    <string name="learn_sp">学习SP存储</string>
+    <string name="learn_db">学习数据库</string>
 </resources>
