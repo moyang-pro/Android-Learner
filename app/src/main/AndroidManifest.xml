@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moyang.room">
+
     <!-- 开机广播接收权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -11,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Room">
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name=".service.ServiceLearnActivity"
+            android:exported="false" />
         <activity
             android:name=".database.DataBaseLearnActivity"
             android:exported="false" />
@@ -45,7 +54,7 @@
             android:exported="false" />
 
         <service
-            android:name=".MyService"
+            android:name=".service.MyService"
             android:enabled="true"
             android:exported="false"
             android:permission="TODO" />
