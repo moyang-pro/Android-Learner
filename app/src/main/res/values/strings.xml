@@ -60,4 +60,5 @@
     <string name="stop_service">停止服务</string>
     <string name="bind_service">绑定服务</string>
     <string name="unbind_service">解绑服务</string>
+    <string name="learn_provider">学习内容提供器</string>
 </resources>

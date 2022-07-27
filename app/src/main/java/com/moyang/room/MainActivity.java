@@ -13,6 +13,7 @@ import com.moyang.room.file.FileLearnActivity;
 import com.moyang.room.file.SharedPreferencesLearnActivity;
 import com.moyang.room.fragment.FragmentLearnActivity;
 import com.moyang.room.layout.LayoutLearnActivity;
+import com.moyang.room.provider.ContentProviderLearnActivity;
 import com.moyang.room.service.ServiceLearnActivity;
 import com.moyang.room.view.ViewLearnActivity;
 
@@ -41,6 +42,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         learnDbBt.setOnClickListener(this);
         Button learnServiceBt = findViewById(R.id.bt_learn_service);
         learnServiceBt.setOnClickListener(this);
+        Button learnProviderBt = findViewById(R.id.bt_learn_provider);
+        learnProviderBt.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +75,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_learn_service:
                 startMyActivity(ServiceLearnActivity.class);
+                break;
+            case R.id.bt_learn_provider:
+                startMyActivity(ContentProviderLearnActivity.class);
                 break;
             default:
                 break;
