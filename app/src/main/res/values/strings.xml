@@ -61,4 +61,5 @@
     <string name="bind_service">绑定服务</string>
     <string name="unbind_service">解绑服务</string>
     <string name="learn_provider">学习内容提供器</string>
+    <string name="learn_glide">学习glide图片加载</string>
 </resources>
