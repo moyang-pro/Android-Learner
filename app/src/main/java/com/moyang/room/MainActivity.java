@@ -1,5 +1,6 @@
 package com.moyang.room;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import com.moyang.room.file.SharedPreferencesLearnActivity;
 import com.moyang.room.fragment.FragmentLearnActivity;
 import com.moyang.room.glide.GlideLearnActivity;
 import com.moyang.room.layout.LayoutLearnActivity;
+import com.moyang.room.okhttp.OkhttpLearnActivity;
 import com.moyang.room.provider.ContentProviderLearnActivity;
 import com.moyang.room.service.ServiceLearnActivity;
 import com.moyang.room.view.ViewLearnActivity;
@@ -47,8 +49,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         learnProviderBt.setOnClickListener(this);
         Button learnGlideBt = findViewById(R.id.bt_learn_glide);
         learnGlideBt.setOnClickListener(this);
+        Button learnHttpBt = findViewById(R.id.bt_learn_okhttp);
+        learnHttpBt.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -84,6 +89,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_learn_glide:
                 startMyActivity(GlideLearnActivity.class);
+                break;
+            case R.id.bt_learn_okhttp:
+                startMyActivity(OkhttpLearnActivity.class);
                 break;
             default:
                 break;

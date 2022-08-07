@@ -11,12 +11,16 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Room">
+        <activity
+            android:name=".okhttp.OkhttpLearnActivity"
+            android:exported="false" />
         <activity
             android:name=".glide.GlideLearnActivity"
             android:exported="false" />
@@ -25,7 +29,7 @@
             android:name=".provider.RestaurantProvider"
             android:authorities="com.moyang.room"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <activity
             android:name=".provider.ContentProviderLearnActivity"
