@@ -1,7 +1,7 @@
 package com.moyang.room;
 
 import android.app.Application;
-
+import android.content.Context;
 
 
 /**
@@ -11,8 +11,15 @@ import android.app.Application;
  */
 public class RoomApplication extends Application {
 
+    private static Context mApplicationContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        mApplicationContext = getApplicationContext();
+    }
+
+    public static Context getContext() {
+        return mApplicationContext;
     }
 }

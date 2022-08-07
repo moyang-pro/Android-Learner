@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".okhttp.OkhttpLearnActivity">
+
+    <Button
+        android:id="@+id/btn_sync_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="同步GET"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <Button
+        android:id="@+id/btn_sync_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="同步POST"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <Button
+        android:id="@+id/btn_async_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步GET"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <Button
+        android:id="@+id/btn_async_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步POST"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <Button
+        android:id="@+id/btn_async_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="retrofit"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="492dp" />
+</LinearLayout>
